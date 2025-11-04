@@ -5,7 +5,7 @@ This tree of terminologies have been helpful to me over the years in the English
 
 ---
 
-Communication Strategy Tree - By Onri 
+Communication Strategy Tree - by Onri 
 
 ```
 ├─ Reality Alignment
@@ -63,37 +63,49 @@ Communication Strategy Tree - By Onri
 
 ---
 
-Idea Formation Pathways by Onri Jay Benally
+Idea Formation Pathways - by Onri 
 
-$$
-\require{extpfeil}
-\begin{array}{c c c}
-\underbrace{
-  \begin{array}{c}
-    \text{Pre‑formation of rudimentary}\\
-    \text{tables \& smaller trees}
-  \end{array}
-}_{\text{Scaffolding}}
-& \xrightarrow{\quad}
-& \begin{array}{c}
-    \text{Formation of hierarchy/ mind‑map/}\\
-    \text{pathway diagram(s)}
-  \end{array}
-\\[1ex]
-\phantom{X} & & \downarrow
-\\[1ex]
-\begin{array}{c}
-    \text{Decide whether to perform}\\
-    \text{steady‑state simulation or}\\
-    \text{transient simulation (animated)}
-  \end{array}
-& \xleftarrow{\quad}
-& \underbrace{
-  \begin{array}{c}
-    \text{Formation of heatmap(s)/}\\
-    \text{action‑consequence diagram(s)}
-  \end{array}
-}_{\text{Supplement with energy‑hill diagram\\or mechanical analogy}}
-\end{array}
-$$
 
+```
++-------------------------------+   +-----------------------------------+
+| Pre‑formation of rudimentary   | → | Formation of hierarchy / mind‑map |
+| tables & smaller trees        |   | / pathway diagram(s)              |
+|            (Scaffolding)      |   +-----------------------------------+
++-------------------------------+               |
+                                               v
++---------------------------------------------------------------+
+| Formation of heatmap(s) / action‑consequence diagram(s)      |
+| (Supplement with energy‑hill diagram or mechanical analogy)  |
++---------------------------------------------------------------+
+^                                                               |
+|                                                               |
++---------------------------------------------------------------+
+| Decide whether to perform steady‑state simulation or          |
+| transient simulation (animated)                               |
++---------------------------------------------------------------+
+```
+
+---
+
+Functional Analogy Categories to Help Explain Virtually Anything to a General Audience - by Onri
+
+```
+└─ Root
+   ├─ Analogy Families
+   │  ├─ LEGO analogy
+   │  ├─ Gravity analogy
+   │  ├─ Basketball analogy
+   │  ├─ Football/soccer analogy
+   │  ├─ Mechanical analogy
+   │  └─ Car-related analogies
+   ├─ Abstraction & Convergence
+   │  ├─ Heat map
+   │  └─ “Spherical cow”
+   ├─ Perception & Analysis
+   │  ├─ Can be felt or seen
+   │  └─ Analyzed with dots in a finite dimension
+   │     └─ Often two-dimensional (2D)
+   │        └─ Exception: three-dimensional (3D) chess
+   └─ Communication Reminder
+      └─ “Say it with your chest.”
+```
