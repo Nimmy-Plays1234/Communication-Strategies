@@ -136,7 +136,23 @@ Resource‑lean Hardware Engineering Strategy
 │   ├─ Cloud compute & notebooks → Google Colab (run GDSTK, openEMS, post‑process)
 │   ├─ Collaborative version control → GitHub (repo, Issues, CI with GitHub Actions)
 │   ├─ Optional electronics layout → KiCad (open‑source PCB) & FreeCAD (mechanical)
-│   └─ **Advanced low‑cost HPC simulation – AWS Palace**
+│   ├─ Qiskit Metal – quantum‑hardware layout & EM design
+│   │   ├─ Open‑source Python package (part of the Qiskit ecosystem) for
+│   │   │   superconducting qubit, resonator, and package geometry creation.
+│   │   ├─ Generates 3‑D models that can be exported directly to GDSTK or
+│   │   │   to a Blender scene for further meshing.
+│   │   ├─ Built‑in parametric constraints (trace width, substrate thickness,
+│   │   │   coupling gaps) let you explore design space with the same intuition‑driven
+│   │   │   “one‑change’’ ranking used elsewhere.
+│   │   ├─ Runs in Google Colab via a pre‑built Docker image (GPU optional) – the
+│   │   │   notebook pulls Qiskit Metal, builds the layout, and hands the mesh to
+│   │   │   openEMS for full‑wave simulation.
+│   │   ├─ Coupled to Qiskit’s circuit simulators (Aer, Aer‑GPU) so you can
+│   │   │   co‑simulate the quantum circuit (e.g., gate fidelity) together with
+│   │   │   the electromagnetic environment (crosstalk, Purcell loss).
+│   │   └─ All geometry files, material tables, and simulation results are
+│   │       version‑controlled in the same GitHub repo as the rest of the project.
+│   └─ Advanced low‑cost HPC simulation – AWS Palace
 │       ├─ Spot‑instance EC2 fleet + AWS ParallelCluster for massive FDTD / Meep sweeps
 │       ├─ Pre‑baked AMIs that contain openEMS, Meep, GDSTK, Python env. → one‑click launch
 │       ├─ Job orchestration via AWS Batch / Step Functions; auto‑scale to demand
@@ -147,6 +163,78 @@ Resource‑lean Hardware Engineering Strategy
 │       └─ CI integration – GitHub Actions can trigger a Palace run on every PR,
 │           archive results as artefacts, and post a ParaView snapshot as a comment.
 │
+├─ Open‑source Multiphysics & Micromagnetics (Google Colab)
+│   ├─ Micromagnetics (GPU‑accelerated)
+│   │   ├─ MuMax3 – runs natively on Colab GPU runtimes via a Docker image;
+│   │   │   Jupyter notebooks drive geometry import (GDSTK → OMF), material tables,
+│   │   │   time‑step scripts, and automatic post‑processing with ParaView.
+│   │   ├─ OOMMF – classic CPU‑only code; compiled for Linux‑x86 and invoked from Colab
+│   │   │   using a persistent “/content/oommf” directory; results visualised with
+│   │   │   `oommf::boxsi` or exported to VTK for ParaView.
+│   │   └─ Fidimag – Python‑based micromagnetic framework built on FEniCS; useful for
+│   │       research‑grade custom energy terms and easy integration with
+│   │       SciPy optimisation loops.
+│   ├─ Optics / Photonics (continuum & wave)
+│   │   ├─ MEEP (MIT‑licensed FDTD) – already packed in the Colab‑friendly image;
+│   │   │   supports sub‑pixel smoothing, dispersive media, and near‑field scans.
+│   │   ├─ pyMieScatt – analytical Mie‑scattering calculations for nanoparticles.
+│   │   └─ OpenFDTD/ FDTD‑Calc – lightweight wrappers for rapid 2‑D/3‑D simulations.
+│   ├─ Large‑scale Magnetics & Induction
+│   │   ├─ MagPar – finite‑element micromagnetics for bulk magnetic components;
+│   │   │   can be compiled on Colab’s Ubuntu environment.
+│   │   ├─ Nmag – FEM micromagnetics that couples to PETSc; useful for
+│   │   │   multi‑physics (magneto‑mechanical) studies.
+│   │   └─ gprMax – open‑source electromagnetic wave propagation (including RF/MW);
+│   │       runs on CPU/GPU and can be scripted from Python notebooks.
+│   ├─ RF/ Microwave Circuit & Antenna
+│   │   ├─ openEMS (already in the stack) – extend with circuit‑extraction (S‑parameter)
+│   │   │   post‑processing scripts written in Python.
+│   │   ├─ Qucs‑S – circuit simulation (SPICE‑like) for RF; command‑line usage from Colab.
+│   │   └─ PyAEDT (open‑source wrapper) – can drive an offline install of ANSYS
+│   │       Electronics Desktop when a licensed installation is available;
+│   │       otherwise fall‑back to openEMS.
+│   ├─ Mechanical & Multi‑physics (continuum)
+│   │   ├─ Calculix – FEM for static/dynamic structural analysis;
+│   │   │   driven by Python front‑end (PyCalculix) and visualised in ParaView.
+│   │   ├─ Elmer FEM – supports coupled magneto‑thermal‑mechanical problems;
+│   │   │   scripts run on Colab via a small pre‑built Docker image.
+│   │   └─ OpenFOAM – CFD (including magnetohydrodynamics) – can be compiled
+│   │       and executed on Colab’s CPU nodes; data streamed to ParaView.
+│   ├─ Molecular‑Dynamics (MD)
+│   │   ├─ LAMMPS – general‑purpose MD; GPU‑accelerated package (`GPU` or `KOKKOS`);
+│   │   │   input decks generated from GDSTK geometry → atomistic lattice.
+│   │   ├─ GROMACS – biomolecular MD (useful for soft‑matter or polymeric
+│   │   │   adhesives); runs on Colab GPU with the `gmx_mpi` binary.
+│   │   └─ ASE (Atomic Simulation Environment) – Python glue that spawns
+│   │       LAMMPS, GPAW, or Quantum ESPRESSO runs and collects results.
+│   ├─ Density‑Functional Theory (DFT) & Quantum‑Scale
+│   │   ├─ Quantum ESPRESSO – plane‑wave DFT; compiled for Linux x86 on Colab;
+│   │   │   used for material‑property extraction (permittivity, permeability,
+│   │   │   magnetocrystalline anisotropy) that feed into higher‑level models.
+│   │   ├─ SIESTA – localized‑basis DFT, lighter memory footprint for large cells.
+│   │   └─ DFTB+ – density‑functional tight‑binding; fast for preliminary band‑structure
+│   │       calculations in a resource‑lean context.
+│   ├─ Hybrid / Multi‑scale Frameworks
+│   │   ├─ Multiscale Modeling Toolbox (MMTB) – Python orchestrator that couples
+│   │   │   continuum FEM (Calculix/Elmer) ↔ MD (LAMMPS) ↔ DFT (Quantum ESPRESSO).
+│   │   ├─ PyMD‑Hybrid – template scripts for handing off boundary regions
+│   │   │   between micromagnetic (MuMax3) and atomistic (LAMMPS) domains.
+│   │   └─ AiiDA – workflow manager that tracks provenance across all the
+│   │       above codes, automatically storing inputs/outputs on Git‑LFS.
+│   └─ Colab‑friendly Workflow
+│       ├─ Every tool is wrapped in a Jupyter notebook cell that:
+│       │   • pulls a Docker image or pre‑compiled binary from the repository,
+│       │   • mounts the project’s `/content/` directory (shared with Git‑Hub),
+│       │   • runs the simulation, and
+│       │   • writes VTK/CSV results directly to an S3 bucket (or keeps them in the
+│       │     notebook runtime for quick ParaView view).
+│       └─ Notebook templates (saved in the repo) include:
+│           • “Micromagnetics ‑ MuMax3 Demo.ipynb’’,
+│           • “Optical‑FDTD ‑ MEEP Demo.ipynb’’,
+│           • “MD‑Cascade ‑ LAMMPS → Quantum ESPRESSO.ipynb’’,
+│           • “Hybrid FEM‑MD‑DFT.ipynb’’,
+│           • “Quantum‑Hardware ‑ Qiskit Metal Demo.ipynb’’.
+│
 ├─ Resource‑lean Fabrication Materials & Processes
 │   ├─ Cardboard, corrugated paper, double‑sided tape (cheap, biodegradable)
 │   ├─ Water‑based adhesives / water‑less dry‑fit joints
@@ -154,7 +242,7 @@ Resource‑lean Hardware Engineering Strategy
 │   ├─ Hobby‑grade 3‑D printing (PLA/ABS) for functional hinges & enclosures
 │   ├─ Laser‑cutting from open‑source SVG/DXF (Inkscape) → inexpensive batch cuts
 │   ├─ Modular origami‑inspired foldable patterns designed in Blender
-│   ├─ **Tape‑based Engineering Solutions**
+│   ├─ Tape‑based Engineering Solutions
 │   │   ├─ Tape‑based microfluidics
 │   │   │   ├─ Define channels by stacking/laminating double‑sided adhesive tape
 │   │   │   ├─ Cut geometry with a hobby plotter, laser cutter, or craft‑knife
@@ -167,20 +255,20 @@ Resource‑lean Hardware Engineering Strategy
 │   │   │   ├─ Mount components with conductive epoxy or solder‑less pressure‑fit pads
 │   │   │   ├─ Rapid redesign by peeling/re‑positioning tape segments
 │   │   │   └─ Integrate with the same adhesive‑tape mechanical frames used elsewhere
-│   │   └─ **Nano‑tape (van‑der‑Waals adhesion)**
+│   │   └─ Nano‑tape (van‑der‑Waals adhesion)
 │   │       ├─ Gecko‑inspired nanostructured adhesive film (graphene, polymer nanoribbons, nanocellulose)
 │   │       ├─ Cut with laser/plotter; no glue, can be peeled & re‑used many times
 │   │       ├─ Shear strength > 10 MPa while thickness < 50 µm → essentially invisible bond line
 │   │       ├─ Bonds directly to cardboard, PET, copper‑foil tape, and 3‑D‑printed nodes
 │   │       └─ Enables “click‑and‑release’’ assembly of fluidic/electronic modules without permanent fasteners
-│   └─ **Nanofabrication & Green Lithography**
+│   └─ Nanofabrication & Green Lithography
 │       ├─ Water‑based photoresists (AZ P4620, S1800, “green’’ SU‑8 variants)
-│       ├─ **Egg‑white albumen lithography resist** (fully biodegradable & <$0.02 / cm²)
+│       ├─ Egg‑white albumen lithography resist (fully biodegradable & <$0.02 / cm²)
 │       │   ├─ Mix fresh egg white (≈30 % protein) with a pinch of glycerol (improved adhesion)
 │       │   ├─ Spin‑coat 5–10 µm film; soft‑bake at 80 °C for 2 min
-│       │   ├─ UV expose (365 nm) – exposure dose 50–100 mJ cm⁻² (adjustable via IBM Granite 4‑generated scripts)
+│       │   ├─ UV expose (365 nm) – dose 50–100 mJ cm⁻² (adjustable via IBM Granite 4‑generated scripts)
 │       │   ├─ Develop in warm de‑ionised water (≈30 °C) – 30 s rinse, no toxic chemicals
-│       │   └─ Post‑exposure bake (optional) at 100 °C for 1 min to increase contrast
+│       │   └─ Optional post‑exposure bake at 100 °C for 1 min to increase contrast
 │       ├─ TMAH‑free developers – sodium carbonate, NaOH, citric‑acid based
 │       ├─ DIY spin‑coater – 3‑D‑printed spinner, Arduino‑driven motor, speed‑control firmware
 │       ├─ Low‑cost hot‑plate bake oven – repurposed soldering‑iron base with PID control
@@ -188,22 +276,22 @@ Resource‑lean Hardware Engineering Strategy
 │       │   ├─ Open‑source DLP projector or laser‑diode scanner
 │       │   └─ Pattern‑generation software: OpenLAF / gLith / PyLitho (Python)
 │       ├─ Open‑source GDSII layout tools → KLayout Python API, gdsfactory for photonic circuits
-│       ├─ Nano‑scale simulation → openEMS or Meep (FDTD) for plasmonic / photonic structures
-│       ├─ **Documentation & Knowledge Capture**
+│       ├─ Nano‑scale simulation → openEMS or Meep (FDTD) for plasmonic/ photonic structures
+│       ├─ Documentation & Knowledge Capture
 │       │   ├─ Every resist recipe, bake schedule, and exposure‑parameter set is uploaded
 │       │   │   • as a Markdown page in the project Wiki (auto‑generated via GitHub Actions)
 │       │   │   • and mirrored in a collaborative Google Doc SOP for quick lab‑member access
 │       │   └─ Revision history tracked in Git – each edit creates a new Wiki version
-│       ├─ **AI‑assisted code & recipe generation**
+│       ├─ AI‑assisted code & recipe generation
 │       │   ├─ Open‑source, memory‑efficient LLMs (IBM Granite 4, Granite 4‑Lite, etc.) run on local GPU/CPU
 │       │   ├─ Used to draft Python spin‑coater scripts, exposure‑dose calculators,
 │       │   │   and to review safety‑check checklists
 │       │   └─ LLM outputs are gated through a PEP‑8 / MISRA‑C linting step before merge
-│       ├─ **Coding & Hardware Design Standards**
+│       ├─ Coding & Hardware Design Standards
 │       │   ├─ Python code → PEP‑8 + Black formatting; C/C++ firmware → MISRA‑C / C++ Core Guidelines
 │       │   ├─ PCB design → IPC‑2221 (generic) & IPC‑7351 (land‑pattern) compliance
 │       │   ├─ Symbol & schematic convention → IEC 60617 symbols, IEEE 315 naming
-│       │   └─ A “standards‑matrix” Wiki page lists required checks for every PR
+│       │   └─ A “standards‑matrix’’ Wiki page lists required checks for every PR
 │       └─ Green waste handling – aqueous rinse, biodegradable developer disposal,
 │           recycling of mask substrates
 │
@@ -226,7 +314,7 @@ Resource‑lean Hardware Engineering Strategy
 │   ├─ Water‑based operation: sealed compartments, passive heat‑pipes
 │   ├─ Water‑less alternatives: phase‑change pads, thermally conductive tapes
 │   ├─ Cardboard‑compatible layouts: foil‑coated paper for moisture barrier
-│   ├─ **Low‑cost Structural Support – Tensegrity Engineering**
+│   ├─ Low‑cost Structural Support – Tensegrity Engineering
 │   │   ├─ Principle: isolated compression rods + tensioned strings
 │   │   │   (e.g., carbon‑fiber or bamboo rods + fishing‑line / high‑modulus polymer cords)
 │   │   ├─ Nodes 3‑D‑printed from PLA/ABS with integrated thumb‑screw or snap‑fit holes
@@ -237,14 +325,14 @@ Resource‑lean Hardware Engineering Strategy
 │   │   ├─ Serves as chassis for electronics, heat‑pipes, microfluidic panels, sensor arrays
 │   │   └─ Scales from tabletop prototypes to metre‑scale structures by adjusting rod
 │   │       length and string count
-│   ├─ **Advanced Low‑Cost Stabilisation – Compliant Mechanisms**
+│   ├─ Advanced Low‑Cost Stabilisation – Compliant Mechanisms
 │   │   ├─ Monolithic flexure hinges laser‑cut from thin PET, FR‑4, or 3‑D printed PLA/ABS
 │   │   ├─ Bistable snap‑through origami cells for zero‑power latching or toggle switches
 │   │   ├─ Low‑cost vibration isolator: alternating layers of silicone sheet & cardstock
 │   │   ├─ Design workflow
 │   │   │   • Parametric model in Blender or OpenSCAD
-│   │   │   • FEM analysis with open‑source Calculix / Elmer (or PyElastica for beam theory)
-│   │   │   • optimisation loop in Python (SciPy, DEAP) to meet target stiffness / travel
+│   │   │   • FEM analysis with open‑source Calculix/ Elmer (or PyElastica for beam theory)
+│   │   │   • optimisation loop in Python (SciPy, DEAP) to meet target stiffness/ travel
 │   │   │   • visualise deformation in ParaView; store results on S3 via AWS Palace
 │   │   ├─ Integration points
 │   │   │   • Attach compliant mounts to tensegrity nodes using nano‑tape → self‑aligning chassis
@@ -265,9 +353,8 @@ Resource‑lean Hardware Engineering Strategy
     ├─ AI‑enhanced development workflow
     │   ├─ IBM Granite 4 (and open‑source variants) run locally to suggest code snippets,
     │   │   debug scripts, and auto‑generate GDSII layout macros
-    │   └─ All generated code passes through automated linters that enforce PEP‑8 / MISRA‑C
-    │       and are reviewed against IPC / IEC hardware standards before merge
+    │   └─ All generated code passes through automated linters that enforce PEP‑8/ MISRA‑C
+    │       and are reviewed against IPC/ IEC hardware standards before merge
     ├─ Contribution workflow: issue templates, pull‑request reviews, CI testing
     └─ License under MIT / CERN‑OHL to encourage remixing and community‑driven extensions
-
 ```
