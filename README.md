@@ -65,24 +65,28 @@ Communication Strategy Tree - by Onri
 
 Idea Formation Pathways - by Onri 
 
-
 ```
-+-------------------------------+   +-----------------------------------+
-| Pre‑formation of rudimentary   | → | Formation of hierarchy / mind‑map |
-| tables & smaller trees        |   | / pathway diagram(s)              |
-|            (Scaffolding)      |   +-----------------------------------+
-+-------------------------------+               |
-                                               v
-+---------------------------------------------------------------+
-| Formation of heatmap(s) / action‑consequence diagram(s)      |
-| (Supplement with energy‑hill diagram or mechanical analogy)  |
-+---------------------------------------------------------------+
-^                                                               |
-|                                                               |
-+---------------------------------------------------------------+
-| Decide whether to perform steady‑state simulation or          |
-| transient simulation (animated)                               |
-+---------------------------------------------------------------+
+Scaffolding
+│   – Pre‑formation of rudimentary tables & smaller trees
+│
+├─ Formation of hierarchy/ mind‑map/ pathway diagram(s)
+│   └─ Decision: which simulation to run?
+│       ├─ Steady‑state simulation
+│       │   └─ (optional) feed results into scatter‑plot refinement
+│       └─ Transient simulation (animated)
+│           └─ (optional) feed results into scatter‑plot refinement
+│
+├─ Formation of heatmap(s)/ action‑consequence diagram(s)
+│   └─ (Supplement with a gravity‑hill diagram or a mechanical analogy)
+│       └─ Decision: which simulation to run if applicable?
+│           ├─ Steady‑state simulation
+│           │   └─ (optional) feed results into scatter‑plot refinement
+│           └─ Transient simulation (animated)
+│               └─ (optional) feed results into scatter‑plot refinement
+│
+└─ Draft scatter‑plot (based on the initial tables)
+    └─ Refine scatter‑plot (incorporate data produced by any simulation or literature search)
+        └─ Comprehensive scatter‑plot (final result)
 ```
 
 ---
