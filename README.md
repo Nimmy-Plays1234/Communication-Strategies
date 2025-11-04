@@ -69,9 +69,9 @@ Functional Analogy Categories to Help Explain Virtually Anything to a General Au
 └─ Root
    ├─ Analogy Families
    │  ├─ LEGO analogy
-   │  ├─ Gravity analogy
+   │  ├─ Gravity-based/ potential energy hill analogy
    │  ├─ Basketball analogy
-   │  ├─ Football/soccer analogy
+   │  ├─ Football/ soccer analogy
    │  ├─ Mechanical analogy
    │  └─ Car-related analogies
    ├─ Abstraction & Convergence
@@ -112,4 +112,47 @@ Scaffolding
 └─ Draft scatter‑plot (based on the initial tables)
     └─ Refine scatter‑plot (incorporate data produced by any simulation or literature search)
         └─ Comprehensive scatter‑plot (final result)
+```
+
+---
+
+Towards Resource Lean Strategies - by Onri 
+
+```
+Design & Simulation Workflow
+│
+├─ Intuition (proactive pruning)
+│   ├─ Compare orders of magnitude
+│   ├─ Rank levers by “one‑change’’ impact
+│   ├─ Sketch barrier shapes before fitting
+│   ├─ Test intuition against the first heat‑map
+│   └─ Update priors
+│       └─ (if no equilibrium) add damping/feedback → the system becomes a
+│           controlled one with a closed‑loop potential V₍closed‑loop₎
+│
+├─ Resource‑lean Strategy (systematic, tiny footprint)
+│   ├─ Start with CSVs, Markdown and a single plotting library
+│   ├─ Prefer Graphviz/ Mermaid over heavyweight CAD 
+│   ├─ Upgrade to CAD only when complexity forces it
+│   └─ (if heat‑map data are sparse) bootstrap with expert priors or a
+│       design‑of‑experiments → posterior surface instead of a raw grid
+│
+├─ Plug‑and‑play (agnostic) Design Implementation (strategic)
+│   ├─ Define module interfaces as contract tables  
+│   │   (inputs, outputs, units, latencies, tolerances)
+│   └─ Keep data formats neutral – CSV, JSON, YAML, DOT – so solvers,
+│       datasets or even domains can be hot‑swapped with minimal glue
+│
+├─ Serviceability (implementation level)
+│   ├─ Insert test points and health‑checks
+│   ├─ Use versioned configuration files and design restartable runs
+│   ├─ Store raw data alongside every derived product
+│   └─ Choose components that expose self‑diagnostics and have clear
+│       replacement procedures
+│
+└─ Compact Footprint & Mechanical Foldability (notable)
+    ├─ Origami‑inspired packaging or hinge‑interposer stacks → folded deployment
+    ├─ Specify flexure radii, connector strain‑relief, and thermal paths up‑front
+    └─ (if foldability is not feasible) substitute rigid‑fold linkages
+        or segmented enclosures → a hinged assembly with defined kinematic constraints
 ```
