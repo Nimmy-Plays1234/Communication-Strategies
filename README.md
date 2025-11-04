@@ -5,50 +5,52 @@ This tree of terminologies have been helpful to me over the years in the English
 
 ---
 
-Communication Strategy Tree - Onri 
+Communication Strategy Tree - By Onri 
 
 ```
 ├─ Reality Alignment
 │  ├─ Literally – exact portrayal
-│  ├─ Faithfully – integrity-anchored depiction
+│  ├─ Faithfully – integrity‑anchored depiction
 │  ├─ Metaphorically – figurative framing
 │  └─ In its direct or true form – unmediated, canonical phrasing
 │
 ├─ Degree of Certainty
 │  ├─ Perhaps – tentative probability
-│  ├─ Arguably – defensible, yet contestable, speaker-oriented epistemic stance (hedged assertion)
-│  └─ Relatively – context-bound qualification
+│  ├─ Arguably – defensible, yet contestable, speaker‑oriented epistemic stance (hedged assertion)
+│  ├─ Relatively – context‑bound qualification
+│  ├─ Reasonably – logically justified, moderately confident
+│  └─ Plausibly – appears possible or credible given current knowledge
 │
 ├─ Extent/ Completeness
-│  ├─ Virtually – almost wholly (≈ 99 %)
-│  ├─ Practically – nearly, within pragmatic limits (≈ 95 %)
-│  └─ Effectively – operationally equivalent in outcome (≈ 95–99 %), results-focused
+│  ├─ Virtually – almost wholly (≈ 99 %)
+│  ├─ Practically – nearly, within pragmatic limits (≈ 95 %)
+│  └─ Effectively – operationally equivalent in outcome (≈ 95–99 %), results‑focused
 │
 ├─ Modal/ Counterfactual Stance
 │  ├─ Hypothetically – speculative scenario testing
-│  ├─ Theoretically – arithmetically supported, by logic or data-pattern model
+│  ├─ Theoretically – arithmetically supported, by logic or data‑pattern model
 │  ├─ Suppose – assumed premise posited for exploration
 │  ├─ If it were any different – counterfactual premise introduction
-│  └─ On the flip side – alternative-outcome contrast
+│  └─ On the flip side – alternative‑outcome contrast
 │
 ├─ Methodological Lens
-│  ├─ Analytically – evidence-weighted derivation (systematic)
-│  ├─ Systematically – step-wise, protocol-driven approach
-│  ├─ Strategically – purpose-aligned planning
-│  ├─ At the implementation level – code-/hardware-layer perspective
+│  ├─ Analytically – evidence‑weighted derivation (systematic)
+│  ├─ Systematically – step‑wise, protocol‑driven approach
+│  ├─ Strategically – purpose‑aligned planning
+│  ├─ At the implementation level – code‑/hardware‑layer perspective
 │  └─ Organically – emerging naturally from context without forced structure
 │
 ├─ Conditionality & Contingency
 │  ├─ Conditionally – valid only under stated premise(s)
 │  └─ By default – baseline assumption prior to override
 │
-├─ Ideal-Real Spectrum
-│  ├─ Ideally – perfect-world benchmark
-│  ├─ Realistically thus far – evidence-based checkpoint
+├─ Ideal‑Real Spectrum
+│  ├─ Ideally – perfect‑world benchmark
+│  ├─ Realistically thus far – evidence‑based checkpoint
 │  └─ Currently deployed – empirically instantiated case
 │
 ├─ Temporal & Agency Orientation
-│  └─ Proactively – forward-acting, anticipatory intervention
+│  └─ Proactively – forward‑acting, anticipatory intervention
 │
 ├─ Attention & Salience
 │  ├─ Notably – signals noteworthy element
@@ -60,3 +62,45 @@ Communication Strategy Tree - Onri
 ```
 
 ---
+
+Idea Formation Pathways by Onri Jay Benally
+
+$$
+\require{extpfeil}   % <-- loads \xrightarrow / \xleftarrow if needed
+
+\begin{array}{c c c}
+% ── first row (left → right) ───────────────────────────────────────
+\underbrace{
+  \begin{array}{c}
+    \text{Pre‑formation of rudimentary}\\
+    \text{tables \& smaller trees}
+  \end{array}
+}_{\text{Scaffolding}}
+&
+\xrightarrow{\quad}
+&
+\begin{array}{c}
+  \text{Formation of hierarchy/ mind‑map/}\\
+  \text{pathway diagram(s)}
+\end{array}
+\\[1ex]
+% ── vertical arrow under the right‑hand box ───────────────────────────
+\phantom{X} & & \downarrow
+\\[1ex]
+% ── second row (right ← left) ───────────────────────────────────────
+\begin{array}{c}
+  \text{Decide whether to perform}\\
+  \text{steady‑state simulation or}\\
+  \text{transient simulation (animated)}
+\end{array}
+&
+\xleftarrow{\quad}
+&
+\underbrace{
+  \begin{array}{c}
+    \text{Formation of heatmap(s)/}\\
+    \text{action‑consequence diagram(s)}
+  \end{array}
+}_{\text{Supplement with energy‑hill diagram\\or mechanical analogy}}
+\end{array}
+$$
