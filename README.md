@@ -169,7 +169,7 @@ Resource‑lean Hardware Engineering Strategy
 │   │   │   Jupyter notebooks drive geometry import (GDSTK → OMF), material tables,
 │   │   │   time‑step scripts, and automatic post‑processing with ParaView.
 │   │   ├─ OOMMF – classic CPU‑only code; compiled for Linux‑x86 and invoked from Colab
-│   │   │   using a persistent “/content/oommf” directory; results visualised with
+│   │   │   using a persistent “/content/oommf” directory; results visualized with
 │   │   │   `oommf::boxsi` or exported to VTK for ParaView.
 │   │   └─ Fidimag – Python‑based micromagnetic framework built on FEniCS; useful for
 │   │       research‑grade custom energy terms and easy integration with
@@ -195,7 +195,7 @@ Resource‑lean Hardware Engineering Strategy
 │   │       otherwise fall‑back to openEMS.
 │   ├─ Mechanical & Multi‑physics (continuum)
 │   │   ├─ Calculix – FEM for static/dynamic structural analysis;
-│   │   │   driven by Python front‑end (PyCalculix) and visualised in ParaView.
+│   │   │   driven by Python front‑end (PyCalculix) and visualized in ParaView.
 │   │   ├─ Elmer FEM – supports coupled magneto‑thermal‑mechanical problems;
 │   │   │   scripts run on Colab via a small pre‑built Docker image.
 │   │   └─ OpenFOAM – CFD (including magnetohydrodynamics) – can be compiled
@@ -333,7 +333,7 @@ Resource‑lean Hardware Engineering Strategy
 │   │   │   • Parametric model in Blender or OpenSCAD
 │   │   │   • FEM analysis with open‑source Calculix/ Elmer (or PyElastica for beam theory)
 │   │   │   • optimization loop in Python (SciPy, DEAP) to meet target stiffness/ travel
-│   │   │   • visualise deformation in ParaView; store results on S3 via AWS Palace
+│   │   │   • visualize deformation in ParaView; store results on S3 via AWS Palace
 │   │   ├─ Integration points
 │   │   │   • Attach compliant mounts to tensegrity nodes using nano‑tape → self‑aligning chassis
 │   │   │   • Use flexure hinges to hold micro‑fluidic chips, reducing stress on fragile bonds
