@@ -132,7 +132,7 @@ Resource‑lean Hardware Engineering Strategy
 │   ├─ Geometry definition & parametric CAD → GDSTK (Python API)
 │   ├─ 3‑D modelling & mesh generation → Blender + Blender‑Python scripts
 │   ├─ Electromagnetic solver → openEMS (FDTD) consumes GDSTK geometry
-│   ├─ Field visualisation → ParaView (remote/Colab‑linked)
+│   ├─ Field visualization → ParaView (remote/Colab‑linked)
 │   ├─ Cloud compute & notebooks → Google Colab (run GDSTK, openEMS, post‑process)
 │   ├─ Collaborative version control → GitHub (repo, Issues, CI with GitHub Actions)
 │   ├─ Optional electronics layout → KiCad (open‑source PCB) & FreeCAD (mechanical)
@@ -173,7 +173,7 @@ Resource‑lean Hardware Engineering Strategy
 │   │   │   `oommf::boxsi` or exported to VTK for ParaView.
 │   │   └─ Fidimag – Python‑based micromagnetic framework built on FEniCS; useful for
 │   │       research‑grade custom energy terms and easy integration with
-│   │       SciPy optimisation loops.
+│   │       SciPy optimization loops.
 │   ├─ Optics / Photonics (continuum & wave)
 │   │   ├─ MEEP (MIT‑licensed FDTD) – already packed in the Colab‑friendly image;
 │   │   │   supports sub‑pixel smoothing, dispersive media, and near‑field scans.
@@ -325,14 +325,14 @@ Resource‑lean Hardware Engineering Strategy
 │   │   ├─ Serves as chassis for electronics, heat‑pipes, microfluidic panels, sensor arrays
 │   │   └─ Scales from tabletop prototypes to metre‑scale structures by adjusting rod
 │   │       length and string count
-│   ├─ Advanced Low‑Cost Stabilisation – Compliant Mechanisms
+│   ├─ Advanced Low‑Cost Stabilization – Compliant Mechanisms
 │   │   ├─ Monolithic flexure hinges laser‑cut from thin PET, FR‑4, or 3‑D printed PLA/ABS
 │   │   ├─ Bistable snap‑through origami cells for zero‑power latching or toggle switches
 │   │   ├─ Low‑cost vibration isolator: alternating layers of silicone sheet & cardstock
 │   │   ├─ Design workflow
 │   │   │   • Parametric model in Blender or OpenSCAD
 │   │   │   • FEM analysis with open‑source Calculix/ Elmer (or PyElastica for beam theory)
-│   │   │   • optimisation loop in Python (SciPy, DEAP) to meet target stiffness/ travel
+│   │   │   • optimization loop in Python (SciPy, DEAP) to meet target stiffness/ travel
 │   │   │   • visualise deformation in ParaView; store results on S3 via AWS Palace
 │   │   ├─ Integration points
 │   │   │   • Attach compliant mounts to tensegrity nodes using nano‑tape → self‑aligning chassis
