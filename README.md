@@ -382,3 +382,81 @@ Resource‑lean Hardware Engineering Strategy
     ├─ Contribution workflow: issue templates, pull‑request reviews, CI testing
     └─ License under MIT/ CERN‑OHL to encourage remixing and community‑driven extensions
 ```
+
+---
+
+| Abbreviation/ Acronym | Meaning                                                                                 |
+| ---------------------- | -------------------------------------------------------------------------------------- |
+| 2D                     | Two-dimensional                                                                        |
+| 3D                     | Three-dimensional                                                                      |
+| ABS                    | Acrylonitrile butadiene styrene (thermoplastic polymer)                                |
+| AEDT                   | Ansys Electronics Desktop                                                              |
+| AiiDA                  | Automated Interactive Infrastructure and Database (workflow/provenance platform)       |
+| AMI                    | Amazon Machine Image                                                                   |
+| API                    | Application Programming Interface                                                      |
+| ASE                    | Atomic Simulation Environment                                                          |
+| AWS                    | Amazon Web Services                                                                    |
+| BOM                    | Bill of Materials                                                                      |
+| CAD                    | Computer-Aided Design                                                                  |
+| CFD                    | Computational Fluid Dynamics                                                           |
+| CI                     | Continuous Integration                                                                 |
+| CSV                    | Comma-Separated Values                                                                 |
+| DFT                    | Density-Functional Theory                                                              |
+| DFTB+                  | Density-Functional Tight-Binding Plus                                                  |
+| DLP                    | Digital Light Processing                                                               |
+| DOT                    | Graphviz DOT language (graph description)                                              |
+| EC2                    | (Amazon) Elastic Compute Cloud                                                         |
+| EM                     | Electromagnetics / electromagnetic                                                     |
+| FDTD                   | Finite-Difference Time-Domain (electromagnetics solver method)                         |
+| FEM                    | Finite Element Method                                                                  |
+| FR-4                   | Flame-Retardant 4 (glass-epoxy laminate for PCBs)                                      |
+| GDSII                  | Graphic Design System II (IC layout file format)                                       |
+| GDSTK                  | GDSII Tool Kit (geometry/GDSII Python/C++ library)                                     |
+| Git LFS                | Git Large File Storage                                                                 |
+| GPAW                   | Grid-based Projector Augmented-Wave (DFT code)                                         |
+| GPR                    | Ground Penetrating Radar                                                               |
+| GROMACS                | GROningen MAchine for Chemical Simulations                                             |
+| GPU                    | Graphics Processing Unit                                                               |
+| HPC                    | High-Performance Computing                                                             |
+| IBM                    | International Business Machines                                                        |
+| IEC 60617              | International Electrotechnical Commission 60617 (graphical symbols for diagrams)       |
+| IEEE 315               | IEEE Std 315 (graphic symbols for electrical/electronics diagrams)                     |
+| IPC-2221               | IPC Generic Standard for Printed Board Design                                          |
+| IPC-7351               | IPC Standard for PCB land-pattern (footprint) design                                   |
+| JSON                   | JavaScript Object Notation                                                             |
+| LAMMPS                 | Large-scale Atomic/Molecular Massively Parallel Simulator                              |
+| LED                    | Light-Emitting Diode                                                                   |
+| LLM                    | Large Language Model                                                                   |
+| MD                     | Molecular Dynamics                                                                     |
+| MEEP                   | MIT Electromagnetic Equation Propagation (FDTD solver)                                 |
+| MISRA-C                | Motor Industry Software Reliability Association – C coding guidelines                  |
+| MMTB                   | Multiscale Modeling Toolbox                                                            |
+| MW                     | Microwave (portion of RF spectrum)                                                     |
+| NURBS                  | Non-Uniform Rational B-Splines                                                         |
+| OASIS                  | Open Artwork System Interchange Standard (IC layout format)                            |
+| OOMMF                  | Object Oriented MicroMagnetic Framework                                                |
+| OMF                    | OOMMF magnetization file (file extension commonly used with OVF data)                  |
+| OpenFOAM               | Open Field Operation And Manipulation (CFD framework)                                  |
+| OVF                    | OOMMF Vector Field (file format)                                                       |
+| PALACE                 | PArallel LArge-scale Computational Electromagnetics (open-source FEM EM solver by AWS) |
+| PCB                    | Printed Circuit Board                                                                  |
+| PDMS                   | Polydimethylsiloxane                                                                   |
+| PET                    | Polyethylene terephthalate                                                             |
+| PETSc                  | Portable, Extensible Toolkit for Scientific Computation                                |
+| PID                    | Proportional–Integral–Derivative (control loop)                                        |
+| PLA                    | Polylactic acid (polylactide)                                                          |
+| PR                     | Pull Request (version-control collaboration)                                           |
+| PyAEDT                 | Python API for Ansys Electronics Desktop                                               |
+| Qucs-S                 | Qucs with SPICE (SPICE-enabled Qucs circuit simulator)                                 |
+| RF                     | Radio Frequency                                                                        |
+| S3                     | (Amazon) Simple Storage Service                                                        |
+| SIESTA                 | Spanish Initiative for Electronic Simulations with Thousands of Atoms                  |
+| SOP                    | Standard Operating Procedure                                                           |
+| SPICE                  | Simulation Program with Integrated Circuit Emphasis                                    |
+| STEP                   | Standard for the Exchange of Product model data (ISO 10303)                            |
+| STL                    | StereoLithography (triangulated mesh file format)                                      |
+| SU-8                   | Negative epoxy photoresist (SU-8 family)                                               |
+| TMAH                   | Tetramethylammonium hydroxide                                                          |
+| TPU                    | Thermoplastic polyurethane                                                             |
+| UV                     | Ultraviolet                                                                            |
+| VTK                    | Visualization Toolkit                                                                  |
