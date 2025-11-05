@@ -144,7 +144,7 @@ Resource‑lean Hardware Engineering Strategy
 │   │       • Generates high‑order, smooth profiles with very few
 │   │         control points → low memory & compute cost
 │   ├─ Electromagnetic solver → openEMS (FDTD) consumes GDSTK geometry
-│   ├─ Field visualisation → ParaView (remote/Colab‑linked)
+│   ├─ Field visualization → ParaView (remote/Colab‑linked)
 │   ├─ Cloud compute & notebooks → Google Colab (run GDSTK, openEMS, post‑process)
 │   ├─ Collaborative version control → GitHub (repo, Issues, CI with GitHub Actions)
 │   ├─ Optional electronics layout → KiCad (open‑source PCB) & FreeCAD (mechanical)
