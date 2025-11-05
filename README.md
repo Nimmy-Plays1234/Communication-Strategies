@@ -165,7 +165,7 @@ Resource‑lean Hardware Engineering Strategy
 │   │   └─ All geometry files, material tables, and simulation results are
 │   │       version‑controlled in the same GitHub repo as the rest of the project.
 │   └─ Advanced low‑cost HPC simulation – AWS Palace
-│       ├─ Spot‑instance EC2 fleet + AWS ParallelCluster for massive FDTD / Meep sweeps
+│       ├─ Spot‑instance EC2 fleet + AWS ParallelCluster for massive FDTD/ Meep sweeps
 │       ├─ Pre‑baked AMIs that contain openEMS, Meep, GDSTK, Python env. → one‑click launch
 │       ├─ Job orchestration via AWS Batch/ Step Functions; auto‑scale to demand
 │       ├─ Input/Output stored on S3 (versioned, cheap, lifecycle‑controlled)
