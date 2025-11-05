@@ -287,7 +287,7 @@ Resource‑lean Hardware Engineering Strategy
 │       ├─ Maskless exposure systems
 │       │   ├─ Open‑source DLP projector or laser‑diode scanner
 │       │   └─ Pattern‑generation software: OpenLAF/ gLith/ PyLitho (Python)
-│       ├─ Open‑source GDSII layout tools → KLayout Python API, gdsfactory for photonic circuits
+│       ├─ Open‑source GDSII/ OASIS layout tools → KLayout Python API, gdsfactory for photonic circuits
 │       ├─ Nano‑scale simulation → openEMS or Meep (FDTD) for plasmonic/ photonic structures
 │       ├─ Documentation & Knowledge Capture
 │       │   ├─ Every resist recipe, bake schedule, and exposure‑parameter set is uploaded
@@ -376,7 +376,7 @@ Resource‑lean Hardware Engineering Strategy
     │   └─ Google Slides for quick design briefs, stakeholder presentations, and tutorial decks
     ├─ AI‑enhanced development workflow
     │   ├─ IBM Granite 4 (and open‑source variants) run locally to suggest code snippets,
-    │   │   debug scripts, and auto‑generate GDSII layout macros
+    │   │   debug scripts, and auto‑generate GDSII/ OASIS layout macros
     │   └─ All generated code passes through automated linters that enforce PEP‑8/ MISRA‑C
     │       and are reviewed against IPC/ IEC hardware standards before merge
     ├─ Contribution workflow: issue templates, pull‑request reviews, CI testing
@@ -406,12 +406,12 @@ Resource‑lean Hardware Engineering Strategy
 | DLP                    | Digital Light Processing                                                               |
 | DOT                    | Graphviz DOT language (graph description)                                              |
 | EC2                    | (Amazon) Elastic Compute Cloud                                                         |
-| EM                     | Electromagnetics / electromagnetic                                                     |
+| EM                     | Electromagnetics/ electromagnetic                                                     |
 | FDTD                   | Finite-Difference Time-Domain (electromagnetics solver method)                         |
 | FEM                    | Finite Element Method                                                                  |
 | FR-4                   | Flame-Retardant 4 (glass-epoxy laminate for PCBs)                                      |
 | GDSII                  | Graphic Design System II (IC layout file format)                                       |
-| GDSTK                  | GDSII Tool Kit (geometry/GDSII Python/C++ library)                                     |
+| GDSTK                  | GDSII/ OASIS Tool Kit (geometry/GDSII/OASIS Python/C++ library)                        |
 | Git LFS                | Git Large File Storage                                                                 |
 | GPAW                   | Grid-based Projector Augmented-Wave (DFT code)                                         |
 | GPR                    | Ground Penetrating Radar                                                               |
