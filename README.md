@@ -52,7 +52,7 @@ Communication Strategy Tree - by Onri
 │  └─ Currently deployed – empirically instantiated case
 │
 ├─ Temporal & Agency Orientation
-│  ├─ Chronologically – earliest→latest sequencing, order-preserving narration
+│  ├─ Chronologically – earliest → latest sequencing, order-preserving narration
 │  └─ Proactively – forward-acting, anticipatory intervention
 │
 ├─ Attention & Salience
